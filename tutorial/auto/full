@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source activate spider
+scrapy crawl job
+scrapy crawl build
+python filter.py
+python unify.py
+cd filter
+open http://localhost:8082
+nodemon index.js
